@@ -1,16 +1,11 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-import { days } from "../helpers/helpers";
+import { days, getDayIndex } from "../helpers/helpers";
 import { Forecastday } from "../types/WeatherType";
 
 export const WeatherCard = ({ data }: { data: Forecastday }) => {
   const celsius = "°C  ";
 
-  const getDayIndex = (date: string) => {
-    const newDate = new Date(date);
-    const day = newDate.getDay();
-    return days[day];
-  };
   return (
     <View style={styles.container}>
       <View style={styles.leftPart}>

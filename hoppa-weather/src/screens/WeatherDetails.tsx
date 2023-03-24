@@ -17,7 +17,7 @@ export const WeatherDetails = (
   return (
     <View style={styles.container}>
       <View style={styles.details}>
-        <Text>{days[getDayIndex(props.route.params!.object.date)]}</Text>
+        <Text>{getDayIndex(params.date)}</Text>
         <Image
           style={styles.icon}
           source={{ uri: `https://${params.day.condition.icon}` }}
